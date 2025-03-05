@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript async / await</h1>
+<h2 id="demo"></h2>
+
+<p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+<script>
+async function myDisplay() {
+  let myPromise = new Promise(function(resolve) {
+    setTimeout(function() {resolve(`   
+      <img class="amazon-logo"
+        src="images/pendulums/pendulum1.jpg">
+       
+
+      
+      `);}, 3000);
+
+      
+
+
+
+  });
+
+
+  let myPromise1 = new Promise(function(resolve) {
+    setTimeout(function() {resolve(`   
+      <img class="amazon-logo"
+        src="images/pendulums/pendulum2.jpg">
+       
+
+      
+      `);}, 5000);
+
+      
+
+
+
+  });
+
+
+
+
+
+  document.getElementById("demo").innerHTML = await myPromise;
+  document.getElementById("demo").innerHTML = await myPromise1;
+}
+
+myDisplay();
+</script>
+
+ 
+
+</body>
+</html>
